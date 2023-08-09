@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @AllArgsConstructor
-public final class NewCharSkills {
+public final class SkillConstants {
 
     public static SkillBoundaries type1Boundaries = new SkillBoundaries(0, 31);
     public static SkillBoundaries type2Boundaries = new SkillBoundaries(32, 66);
@@ -121,8 +121,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(319, 105, 1),
             new SkillSlotLvl(320, 106, 1),
             new SkillSlotLvl(321, 107, 1),
-            new SkillSlotLvl(322, 108, 1),
-            new SkillSlotLvl(323, 109, 1),
+            //new SkillSlotLvl(322, 108, 1),
+            //new SkillSlotLvl(323, 109, 1),
             new SkillSlotLvl(330, 67, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
@@ -139,8 +139,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(325, 105, 1),
             new SkillSlotLvl(326, 106, 1),
             new SkillSlotLvl(327, 107, 1),
-            new SkillSlotLvl(328, 108, 1),
-            new SkillSlotLvl(329, 109, 1),
+            //new SkillSlotLvl(328, 108, 1),
+            //new SkillSlotLvl(329, 109, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
             new SkillSlotLvl(333, 70, 1),
@@ -160,8 +160,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(486, 105, 1),
             new SkillSlotLvl(487, 106, 1),
             new SkillSlotLvl(488, 107, 1),
-            new SkillSlotLvl(489, 108, 1),
-            new SkillSlotLvl(490, 109, 1),
+            //new SkillSlotLvl(489, 108, 1),
+            //new SkillSlotLvl(490, 109, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
             new SkillSlotLvl(333, 70, 1),
@@ -181,8 +181,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(491, 105, 1),
             new SkillSlotLvl(492, 106, 1),
             new SkillSlotLvl(493, 107, 1),
-            new SkillSlotLvl(494, 108, 1),
-            new SkillSlotLvl(495, 109, 1),
+            //new SkillSlotLvl(494, 108, 1),
+            //new SkillSlotLvl(495, 109, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
             new SkillSlotLvl(333, 70, 1),
@@ -197,8 +197,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(506, 105, 1),
             new SkillSlotLvl(507, 106, 1),
             new SkillSlotLvl(508, 107, 1),
-            new SkillSlotLvl(509, 108, 1),
-            new SkillSlotLvl(510, 109, 1),
+            //new SkillSlotLvl(509, 108, 1),
+            //new SkillSlotLvl(510, 109, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
             new SkillSlotLvl(333, 70, 1),
@@ -217,8 +217,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(501, 105, 1),
             new SkillSlotLvl(502, 106, 1),
             new SkillSlotLvl(503, 107, 1),
-            new SkillSlotLvl(504, 108, 1),
-            new SkillSlotLvl(505, 109, 1),
+            //new SkillSlotLvl(504, 108, 1),
+            //new SkillSlotLvl(505, 109, 1),
             new SkillSlotLvl(332, 67, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
@@ -237,8 +237,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(496, 105, 1),
             new SkillSlotLvl(497, 106, 1),
             new SkillSlotLvl(498, 107, 1),
-            new SkillSlotLvl(499, 108, 1),
-            new SkillSlotLvl(500, 109, 1),
+            //new SkillSlotLvl(499, 108, 1),
+            //new SkillSlotLvl(500, 109, 1),
             new SkillSlotLvl(331, 67, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
@@ -258,8 +258,8 @@ public final class NewCharSkills {
             new SkillSlotLvl(481, 105, 1),
             new SkillSlotLvl(482, 106, 1),
             new SkillSlotLvl(483, 107, 1),
-            new SkillSlotLvl(484, 108, 1),
-            new SkillSlotLvl(485, 109, 1),
+            //new SkillSlotLvl(484, 108, 1),
+            //new SkillSlotLvl(485, 109, 1),
             new SkillSlotLvl(420, 68, 1),
             new SkillSlotLvl(452, 69, 1),
             new SkillSlotLvl(333, 70, 1),
@@ -274,19 +274,19 @@ public final class NewCharSkills {
             new SkillSlotLvl(383, 81, 1)
     ));
     public static List<SkillLvl> GL_1_2 = new ArrayList<>(Arrays.asList(
-            new SkillLvl(208, 9),
-            new SkillLvl(374, 20),
-            new SkillLvl(177, 20),
-            new SkillLvl(179, 20),
-            new SkillLvl(209, 9))
+            new SkillLvl(209, 9),
+            new SkillLvl(374, 1),
+            new SkillLvl(177, 1),
+            new SkillLvl(179, 1),
+            new SkillLvl(208, 9))
     );
     public static List<SkillLvl> FG_1_2 = new ArrayList<>(Arrays.asList(new SkillLvl(208, 9), new SkillLvl(209, 9)));
     public static List<SkillLvl> WA_1_2 = new ArrayList<>(Arrays.asList(
-            new SkillLvl(208, 9),
-            new SkillLvl(2, 20),
-            new SkillLvl(3, 20),
-            new SkillLvl(1, 20),
-            new SkillLvl(209, 9)
+            new SkillLvl(209, 9),
+            new SkillLvl(2, 1),
+            new SkillLvl(3, 1),
+            new SkillLvl(1, 1),
+            new SkillLvl(208, 9)
     )
     );
     public static List<Integer> GL_1 = new ArrayList<>(Arrays.asList(
@@ -314,9 +314,7 @@ public final class NewCharSkills {
     public static List<Integer> GL_2 = new ArrayList<>(Arrays.asList(
             178,
             181,
-            298,
             376,
-            378,
             397,
             377,
             115,
@@ -364,7 +362,6 @@ public final class NewCharSkills {
             84,
             91,
             317,
-            89,
             94,
             85,
             86,
@@ -372,16 +369,12 @@ public final class NewCharSkills {
     ));
     public static List<Integer> WA_1 = new ArrayList<>(Arrays.asList(
             10,
-            203,
             22,
             23,
             30,
-            204,
             68,
             38,
-            216,
             43,
-            205,
             206,
             34,
             202,
@@ -431,26 +424,21 @@ public final class NewCharSkills {
     ));
 
     public static List<SkillLvl> BL_1_2 = new ArrayList<>(Arrays.asList(
-            new SkillLvl(208, 9),
-            new SkillLvl(2, 20),
-            new SkillLvl(1, 20),
-            new SkillLvl(16, 20),
-            new SkillLvl(209, 9))
+            new SkillLvl(209, 9),
+            new SkillLvl(2, 1),
+            new SkillLvl(1, 1),
+            new SkillLvl(16, 1),
+            new SkillLvl(208, 9))
     );
     public static List<Integer> BL_1 = new ArrayList<>(Arrays.asList(
-            203,
             22,
             24,
             31,
-            204,
             20,
             68,
             38,
-            211,
             44,
             70,
-            205,
-            212,
             35,
             202,
             210,
@@ -537,12 +525,10 @@ public final class NewCharSkills {
             450,
             451,
             152,
-            40,
+            244,
             153,
             245,
-            272,
             155,
-            273,
             247,
             156,
             168,
@@ -626,10 +612,12 @@ public final class NewCharSkills {
             new SkillLvl(41, 10),
             new SkillLvl(42, 8),
             new SkillLvl(51, 8),
+            new SkillLvl(52, 8),
             new SkillLvl(53, 9),
             new SkillLvl(54, 9),
             new SkillLvl(133, 3),
             new SkillLvl(136, 3),
+            new SkillLvl(137, 3),
             new SkillLvl(150, 3),
             new SkillLvl(154, 3),
             new SkillLvl(223, 1),
@@ -654,7 +642,6 @@ public final class NewCharSkills {
             new SkillLvl(316, 1)
     ));
     public static List<Integer> FB_2 = new ArrayList<>(Arrays.asList(
-            253,
             257,
             115,
             116,
@@ -662,16 +649,13 @@ public final class NewCharSkills {
             118,
             119,
             120,
-            255,
             241,
-
             122,
             123,
             124,
             125,
             126,
             127,
-            254,
             258,
             260,
             261,
@@ -679,14 +663,13 @@ public final class NewCharSkills {
             271
     ));
     public static List<SkillLvl> FB_1_2 = new ArrayList<>(Arrays.asList(
-            new SkillLvl(208, 9),
-            new SkillLvl(2, 20),
-            new SkillLvl(1, 20),
-            new SkillLvl(17, 20),
-            new SkillLvl(209, 9))
+            new SkillLvl(209, 9),
+            new SkillLvl(2, 1),
+            new SkillLvl(1, 1),
+            new SkillLvl(17, 1),
+            new SkillLvl(208, 9))
     );
     public static List<Integer> FB_1 = new ArrayList<>(Arrays.asList(
-            468,
             22,
             25,
             33,
@@ -735,17 +718,16 @@ public final class NewCharSkills {
             127,
             249,
             159,
-            250,
             251,
             224,
             225
     ));
     public static List<SkillLvl> FS_1_2 = new ArrayList<>(Arrays.asList(
-            new SkillLvl(208, 9),
-            new SkillLvl(2, 20),
-            new SkillLvl(1, 20),
-            new SkillLvl(11, 20),
-            new SkillLvl(209, 9)
+            new SkillLvl(209, 9),
+            new SkillLvl(2, 1),
+            new SkillLvl(1, 1),
+            new SkillLvl(11, 1),
+            new SkillLvl(208, 9)
     ));
     public static List<Integer> FS_1 = new ArrayList<>(Arrays.asList(
             13,
@@ -757,7 +739,6 @@ public final class NewCharSkills {
             71,
             45,
             469,
-            468,
             36,
             57,
             65,
@@ -765,23 +746,55 @@ public final class NewCharSkills {
             74
     ));
 
-    public static List<Integer> FA_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> FA_BOOKS = new HashSet<>(Arrays.asList(
             470, 471, 19, 334
     ));
-    public static List<Integer> BL_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> BL_BOOKS = new HashSet<>(Arrays.asList(
             472, 473, 21, 201
     ));
-    public static List<Integer> FS_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> FS_BOOKS = new HashSet<>(Arrays.asList(
             15, 335
     ));
-    public static List<Integer> FB_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> FB_BOOKS = new HashSet<>(Arrays.asList(
             14, 268, 336
     ));
-    public static List<Integer> WI_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> WI_BOOKS = new HashSet<>(Arrays.asList(
             18, 239
     ));
-    public static List<Integer> WA_BOOKS = new ArrayList<>(Arrays.asList(
+    public static Set<Integer> WA_BOOKS = new HashSet<>(Arrays.asList(
             26, 222, 200
     ));
+
+    public static Map<Integer, Set<Integer>> getBookIdsByClassId() {
+        return Map.of(
+                1, WA_BOOKS,
+                2, BL_BOOKS,
+                3, WI_BOOKS,
+                4, FA_BOOKS,
+                5, FS_BOOKS,
+                6, FB_BOOKS
+        );
+    }
+
+    public static Integer getLvlBySkillId(Integer skillId) {
+        List<SkillLvl> skillLvls = new ArrayList<>();
+        skillLvls.addAll(WA_3);
+        skillLvls.addAll(WA_1_2);
+        skillLvls.addAll(WI_3);
+        skillLvls.addAll(WI_1_2);
+        skillLvls.addAll(FB_3);
+        skillLvls.addAll(FB_1_2);
+        skillLvls.addAll(FG_3);
+        skillLvls.addAll(FG_1_2);
+        skillLvls.addAll(FS_3);
+        skillLvls.addAll(FS_1_2);
+        skillLvls.addAll(FA_3);
+        skillLvls.addAll(FA_1_2);
+        skillLvls.addAll(GL_3);
+        skillLvls.addAll(GL_1_2);
+        skillLvls.addAll(BL_3);
+        skillLvls.addAll(BL_1_2);
+        return skillLvls.stream().distinct().filter(x -> x.getId() == skillId).findFirst().map(SkillLvl::getLvl).orElse(null);
+    }
 }
 

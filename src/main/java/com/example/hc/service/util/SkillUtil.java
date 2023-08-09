@@ -1,14 +1,12 @@
-package com.example.hc.service;
+package com.example.hc.service.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.example.hc.constants.NewCharSkills;
+import com.example.hc.constants.SkillConstants;
 import com.example.hc.domain.model.Skill;
 import static com.example.hc.constants.SkillsMsg.SKILLS;
 
@@ -58,11 +56,11 @@ public class SkillUtil {
         List<Skill> type2Skills = new ArrayList<>();
         List<Skill> type3Skills = new ArrayList<>();
         List<Skill> type4Skills = new ArrayList<>();
-        NewCharSkills.SkillBoundaries type1Boundaries = NewCharSkills.type1Boundaries;
-        NewCharSkills.SkillBoundaries type2Boundaries = NewCharSkills.type2Boundaries;
-        NewCharSkills.SkillBoundaries type3Boundaries = NewCharSkills.type3Boundaries;
-        NewCharSkills.SkillBoundaries type4Boundaries_2 = NewCharSkills.type4Boundaries_2;
-        NewCharSkills.SkillBoundaries type4Boundaries = NewCharSkills.type4Boundaries;
+        SkillConstants.SkillBoundaries type1Boundaries = SkillConstants.type1Boundaries;
+        SkillConstants.SkillBoundaries type2Boundaries = SkillConstants.type2Boundaries;
+        SkillConstants.SkillBoundaries type3Boundaries = SkillConstants.type3Boundaries;
+        SkillConstants.SkillBoundaries type4Boundaries_2 = SkillConstants.type4Boundaries_2;
+        SkillConstants.SkillBoundaries type4Boundaries = SkillConstants.type4Boundaries;
 
         for (Skill skill : skills) {
             final Integer slotId = skill.getSlotId();
@@ -82,16 +80,16 @@ public class SkillUtil {
         return Map.of(1, type1Skills, 2, type2Skills, 3, type3Skills, 4, type4Skills);
     }
 
-    public static Map<Integer, Set<Integer>> toSkillSetsByType(List<Skill> skills) {
-        Set<Integer> type1Skills = new HashSet<>();
-        Set<Integer> type2Skills = new HashSet<>();
-        Set<Integer> type3Skills = new HashSet<>();
-        Set<Integer> type4Skills = new HashSet<>();
-        NewCharSkills.SkillBoundaries type1Boundaries = NewCharSkills.type1Boundaries;
-        NewCharSkills.SkillBoundaries type2Boundaries = NewCharSkills.type2Boundaries;
-        NewCharSkills.SkillBoundaries type3Boundaries = NewCharSkills.type3Boundaries;
-        NewCharSkills.SkillBoundaries type4Boundaries_2 = NewCharSkills.type4Boundaries_2;
-        NewCharSkills.SkillBoundaries type4Boundaries = NewCharSkills.type4Boundaries;
+    public static Map<Integer, List<Integer>> toSkillSetsByType(List<Skill> skills) {
+        List<Integer> type1Skills = new ArrayList<>();
+        List<Integer> type2Skills = new ArrayList<>();
+        List<Integer> type3Skills = new ArrayList<>();
+        List<Integer> type4Skills = new ArrayList<>();
+        SkillConstants.SkillBoundaries type1Boundaries = SkillConstants.type1Boundaries;
+        SkillConstants.SkillBoundaries type2Boundaries = SkillConstants.type2Boundaries;
+        SkillConstants.SkillBoundaries type3Boundaries = SkillConstants.type3Boundaries;
+        SkillConstants.SkillBoundaries type4Boundaries_2 = SkillConstants.type4Boundaries_2;
+        SkillConstants.SkillBoundaries type4Boundaries = SkillConstants.type4Boundaries;
 
         for (Skill skill : skills) {
             final Integer slotId = skill.getSlotId();
@@ -111,7 +109,7 @@ public class SkillUtil {
         return Map.of(1, type1Skills, 2, type2Skills, 3, type3Skills, 4, type4Skills);
     }
 
-    public static boolean inBoundaries(Integer slotId, NewCharSkills.SkillBoundaries boundaries) {
+    public static boolean inBoundaries(Integer slotId, SkillConstants.SkillBoundaries boundaries) {
         return slotId <= boundaries.getTo() && slotId >= boundaries.getFrom();
     }
 }
