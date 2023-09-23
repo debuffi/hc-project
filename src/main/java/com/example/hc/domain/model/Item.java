@@ -17,6 +17,10 @@ public class Item {
     private String otherBinaryData;
     private String name;
     private String firstBinaryData;
+    private String itemIdSerialOption;
+    private Long serial;
+    private Long option;
+    private String serialString;
 
     public Item(Integer itemId, Integer kindId) {
         this.itemId = itemId;

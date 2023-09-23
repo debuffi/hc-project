@@ -2,13 +2,21 @@ spring:
   application:
     name: hc
 server:
-  port: 8080
+  port: 8086
 
-spring.datasource:
-  url: jdbc:sqlserver://185.17.0.12:30001;encrypt=false
+int.datasource:
+  jdbcUrl: jdbc:sqlserver://46.174.49.97:30002;encrypt=false;databaseName=Cabalist
+  username: sa
+  password: ZTVLdvncW7eJq8nfXWcBewwm
+  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+main.datasource:
+  jdbcUrl: jdbc:sqlserver://46.174.49.97:30005;encrypt=false
   username: sa
   password: ZTVLdvncW7eJq8nfXWcBewwm
   driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
 spring.jpa:
   show-sql: true
+  hibernate.ddl-auto: none
+
+
 

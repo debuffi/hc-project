@@ -35,7 +35,7 @@ public class ItemUtil {
             int itemId = kindId & 4095;
             String itemMsg = ITEMS.stream().filter(s -> s.contains("\"item" + itemId + "\"")).findFirst().get();
             String itemName = itemMsg.substring(itemMsg.indexOf("cont=\"") + 6, itemMsg.lastIndexOf("\""));
-            result.add(new Item(itemId, kindId, otherBinaryData, itemName, first));
+            result.add(new Item(itemId, kindId, otherBinaryData, itemName, first, null, null, null, null));
         }
         return result;
     }
@@ -53,15 +53,21 @@ public class ItemUtil {
     public static List<Item> toModel(String[] itemAsArray) {
         List<Item> result = new ArrayList<>();
         for (String skill : itemAsArray) {
+            String itemIdSerialOption = skill.substring(0, 24);
+            String serialString = skill.substring(8, 16);
+            String optionString = skill.substring(16, 24);
             String kindIdAsString = skill.substring(0, 8);
             String otherBinaryData = skill.substring(8);
-
             String[] itemArray = kindIdAsString.split("(?<=\\G.{2})");
+            String[] optionStringArr = optionString.split("(?<=\\G.{2})");
+            String[] serialStringArray = serialString.split("(?<=\\G.{2})");
             int kindId = Integer.parseInt(itemArray[3] + itemArray[2] + itemArray[1] + itemArray[0], 16);
+            Long serial = Long.parseLong(serialStringArray[3] + serialStringArray[2] + serialStringArray[1] + serialStringArray[0], 16);
+            Long option = Long.parseLong(optionStringArr[3] + optionStringArr[2] + optionStringArr[1] + optionStringArr[0], 16);
             int itemId = kindId & 4095;
             String itemMsg = ITEMS.stream().filter(s -> s.contains("\"item" + itemId + "\"")).findFirst().orElse("");
             String itemName = itemMsg.equals("") ? "" : itemMsg.substring(itemMsg.indexOf("cont=\"") + 6, itemMsg.lastIndexOf("\""));
-            result.add(new Item(itemId, kindId, otherBinaryData, itemName, null));
+            result.add(new Item(itemId, kindId, otherBinaryData, itemName, null, itemIdSerialOption, serial, option, serialString));
         }
         return result;
     }
@@ -80,11 +86,19 @@ public class ItemUtil {
         return stringBuilder.toString();
     }
 
-    public String toBinary(Integer var, Integer countBytes) {
+    public String toBinary(Number var, Integer countBytes) {
         return Arrays.stream(String.format("%0" + countBytes + "X", var).split("(?<=\\G.{2})")).collect(ArrayList::new,
                 (list, e) -> list.add(0, e),
                 (list1, list2) -> list1.addAll(0, list2)).stream().map(String::valueOf).collect(Collectors.joining(""));
     }
+
+    public String toBinaryReversed(Number var, Integer countBytes) {
+        return Arrays.stream(String.format("%0" + countBytes + "X", var).split("(?<=\\G.{2})")).sorted((a, b) -> -1).collect(ArrayList::new,
+            (list, e) -> list.add(0, e),
+            (list1, list2) -> list1.addAll(0, list2)).stream().map(String::valueOf).collect(Collectors.joining(""));
+    }
+
+
 
     public static void setNewItemId(Item item, Integer value) {
         item.setKindId(item.getKindId() - item.getItemId() + value);
