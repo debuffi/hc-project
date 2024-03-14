@@ -1,19 +1,16 @@
 package com.example.hc.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import com.example.hc.domain.model.Account;
 import com.example.hc.domain.model.Character;
 import com.example.hc.domain.model.Item;
 import com.example.hc.repository.ItemRepository;
 import com.example.hc.service.util.ItemUtil;
-import static com.example.hc.constants.ItemConstants.ITEM_MAPPING;
-
-import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import static com.example.hc.constants.ItemConstants.ITEM_MAPPING;
 
 /**
  * @author Vyacheslav Savinov
@@ -141,6 +138,13 @@ public class ItemService {
 
         }
         return result;
+    }
+
+    public List<Item> get(Integer charId) {
+        final List<Item> inventoryByCharId = itemRepository.getInventoryByCharId(charId);
+        final List<Item> equipByCharId = itemRepository.getEquipByCharId(charId);
+        inventoryByCharId.addAll(equipByCharId);
+        return inventoryByCharId;
     }
 }
 

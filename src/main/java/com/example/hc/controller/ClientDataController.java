@@ -1,5 +1,6 @@
 package com.example.hc.controller;
 
+import com.example.hc.service.TcpServerService;
 import java.util.Map;
 
 import com.example.hc.service.ClientDataService;
@@ -21,9 +22,15 @@ import lombok.RequiredArgsConstructor;
 public class ClientDataController {
 
     private final ClientDataService clientDataService;
+    private final TcpServerService tcpServerService;
 
     @GetMapping("/{userNum}")
     public Map<Integer, Integer> getBattleStyleChars(@PathVariable Integer userNum) {
         return clientDataService.getBattleStyleChars(userNum);
+    }
+
+    @GetMapping("/test")
+    public Object getBattleStyleChars() {
+        return tcpServerService.getHealthData();
     }
 }

@@ -37,11 +37,13 @@ public class ClientDataRepository {
                 (rs, rowNum) -> rs.getInt("RegisterCharIdx"));
 
         friendCharIds.addAll(guildCharIds);
+        if(friendCharIds.isEmpty()) return Map.of();
+
         String collect = friendCharIds.stream().distinct().map(String::valueOf)
                 .collect(Collectors.joining(", "));
         Map<Integer, Integer> resultMap = new HashMap<>();
         intJdbcTemplate.query(
-                "SELECT CharacterIdx, ClassStyle FROM Server01.dbo.cabal_character_table WHERE ClassStyle IN (7,8) AND CharacterIdx IN (" + collect + ")",
+                "SELECT CharacterIdx, ClassStyle FROM Server01.dbo.cabal_character_table WHERE ClassStyle IN (7,8,9) AND CharacterIdx IN (" + collect + ")",
                 (RowMapper<Void>) (rs, rowNum) -> {
                     int characterIdx = rs.getInt("CharacterIdx");
                     int classStyle = rs.getInt("ClassStyle");

@@ -10,7 +10,7 @@ int.datasource:
   password: ZTVLdvncW7eJq8nfXWcBewwm
   driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
 main.datasource:
-  jdbcUrl: jdbc:sqlserver://46.174.49.97:30005;encrypt=false
+  jdbcUrl: jdbc:sqlserver://46.174.49.97:30002;encrypt=false
   username: sa
   password: ZTVLdvncW7eJq8nfXWcBewwm
   driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

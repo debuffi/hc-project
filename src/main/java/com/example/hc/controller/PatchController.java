@@ -1,7 +1,5 @@
 package com.example.hc.controller;
 
-import java.util.List;
-
 import com.example.hc.domain.model.Item;
 import com.example.hc.domain.model.Skill;
 import com.example.hc.service.CashService;
@@ -11,12 +9,11 @@ import com.example.hc.service.ItemService;
 import com.example.hc.service.ShopService;
 import com.example.hc.service.SkillService;
 import com.example.hc.service.restorer.Restorer;
-
+import java.util.List;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import lombok.RequiredArgsConstructor;
 
 /**
  * @author Vyacheslav Savinov
@@ -37,6 +34,11 @@ public class PatchController {
     @GetMapping("/get/{charId}")
     public List<Skill> getSkills(@PathVariable Integer charId) {
         return skillService.get(charId);
+    }
+
+    @GetMapping("/items/get/{charId}")
+    public List<Item> getItems(@PathVariable Integer charId) {
+        return itemService.get(charId);
     }
 
     // восстановить эквип + инвентарь на чаров
@@ -72,7 +74,6 @@ public class PatchController {
     }
 
 
-
     @GetMapping("/patch/items/chars/{charId}")
     public List<Item> patchItems(@PathVariable Integer charId) {
         return itemService.patchChar(charId);
@@ -92,8 +93,6 @@ public class PatchController {
     public void patchCharsItems() {
         itemService.patchChars();
     }
-
-
 
 
     @GetMapping("/patch/items/rings/chars/all")
